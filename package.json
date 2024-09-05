@@ -1,7 +1,7 @@
 {
   "name": "vite-vue3",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite --mode dev",
@@ -15,9 +15,17 @@
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
     "@vitejs/plugin-vue": "^4.5.2",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
+    "husky": "^9.1.5",
+    "eslint": "8.56.0",
+    "lint-staged": "^15.2.10",
     "vue-tsc": "^1.8.25"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,vue}": "pnpm run lint"
   }
 }
